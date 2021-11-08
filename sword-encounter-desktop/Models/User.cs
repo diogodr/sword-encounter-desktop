@@ -12,7 +12,8 @@ namespace sword_encounter_desktop.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
-        public string BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
         public string Genery { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

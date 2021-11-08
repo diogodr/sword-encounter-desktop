@@ -15,56 +15,50 @@ using System.Windows.Forms;
 
 namespace sword_encounter_desktop
 {
-    public partial class UserUI : Form
+    public partial class RecordUI : Form
     {
-        UserClient userClient = new UserClient();
-
-        public UserUI()
+        CharacterClient characterClient = new CharacterClient();
+        public RecordUI()
         {
             InitializeComponent();
-            loadChartUsers();
-        }    
-        private async void loadChartUsers()
+            loadChartCharacters();
+        }
+
+        private async void loadChartCharacters()
         {
-            List<User> users = await userClient.ListUsers();
-            Debug.WriteLine(users[0].Email);
+            List<Character> characters = await characterClient.ListCharacters();
 
             List<int> mounths = new List<int> { };
 
             for (int i = 1; i <= 12; i++)
             {
-                mounths.Add(users.FindAll(user => user.CreatedAt.Month == i).Count);
+                mounths.Add(characters.FindAll(character => character.CreatedAt.Month == i).Count);
             }
 
-            cartesianUsers.AxisX.Add(new LiveCharts.Wpf.Axis
+            cartesianRecords.AxisX.Add(new LiveCharts.Wpf.Axis
             {
                 Title = "Mês",
                 Labels = new[] { "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"  }
             });
 
-            cartesianUsers.AxisY.Add(new LiveCharts.Wpf.Axis
+            cartesianRecords.AxisY.Add(new LiveCharts.Wpf.Axis
             {
                 Title = "Usuários"                
             });
 
-            cartesianUsers.LegendLocation = LiveCharts.LegendLocation.Right;
+            cartesianRecords.LegendLocation = LiveCharts.LegendLocation.Right;
 
-            cartesianUsers.Series.Clear();
+            cartesianRecords.Series.Clear();
 
             SeriesCollection series = new SeriesCollection();
 
             series.Add(new LineSeries()
             {
-                Title = "Qtde de usuários",
+                Title = "Qtde de fichas",
                 Values = new ChartValues<int>(mounths)
             }); ;
 
-            cartesianUsers.Series = series;
-        }
-
-        private void cartesianUsers_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
-        {
-
+            cartesianRecords.Series = series;
         }
     }
 }

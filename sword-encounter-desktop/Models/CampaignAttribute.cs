@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sword_encounter_desktop.Models
 {
-    class CampaignAttribute
+    public class CampaignAttribute
     {
         public string Id { get; set; }
         public string Description { get; set; }

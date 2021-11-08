@@ -14,9 +14,6 @@ namespace sword_encounter_desktop.Client
     public class UserClient
     {
         private static HttpClient client = new HttpClient();
-
-       
-
         public async Task<List<User>> ListUsers()
         {
             List<User> users = null;

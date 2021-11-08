@@ -16,7 +16,7 @@ namespace sword_encounter_desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserUI());
+            Application.Run(new HomeUI());
         }
     }
 }

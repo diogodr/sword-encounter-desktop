@@ -1,6 +1,6 @@
 ﻿namespace sword_encounter_desktop
 {
-    partial class Home
+    partial class HomeUI
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.buttonUsuarios = new System.Windows.Forms.Button();
-            this.buttonMestres = new System.Windows.Forms.Button();
             this.buttonJogadores = new System.Windows.Forms.Button();
             this.buttonFichas = new System.Windows.Forms.Button();
             this.buttonCampanhas = new System.Windows.Forms.Button();
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.buttonMestres = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonUsuarios
@@ -46,67 +47,80 @@
             this.buttonUsuarios.TabIndex = 0;
             this.buttonUsuarios.Text = "Usuários";
             this.buttonUsuarios.UseVisualStyleBackColor = false;
-            // 
-            // buttonMestres
-            // 
-            this.buttonMestres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.buttonMestres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMestres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
-            this.buttonMestres.Location = new System.Drawing.Point(26, 94);
-            this.buttonMestres.Name = "buttonMestres";
-            this.buttonMestres.Size = new System.Drawing.Size(112, 36);
-            this.buttonMestres.TabIndex = 1;
-            this.buttonMestres.Text = "Mestres";
-            this.buttonMestres.UseVisualStyleBackColor = false;
+            this.buttonUsuarios.Click += new System.EventHandler(this.buttonUsuarios_Click);
             // 
             // buttonJogadores
             // 
             this.buttonJogadores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.buttonJogadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonJogadores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
-            this.buttonJogadores.Location = new System.Drawing.Point(26, 148);
+            this.buttonJogadores.Location = new System.Drawing.Point(26, 90);
             this.buttonJogadores.Name = "buttonJogadores";
             this.buttonJogadores.Size = new System.Drawing.Size(112, 36);
             this.buttonJogadores.TabIndex = 2;
             this.buttonJogadores.Text = "Jogadores";
             this.buttonJogadores.UseVisualStyleBackColor = false;
+            this.buttonJogadores.Click += new System.EventHandler(this.buttonJogadores_Click);
             // 
             // buttonFichas
             // 
             this.buttonFichas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.buttonFichas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFichas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
-            this.buttonFichas.Location = new System.Drawing.Point(26, 202);
+            this.buttonFichas.Location = new System.Drawing.Point(26, 205);
             this.buttonFichas.Name = "buttonFichas";
             this.buttonFichas.Size = new System.Drawing.Size(112, 36);
             this.buttonFichas.TabIndex = 3;
             this.buttonFichas.Text = "Fichas";
             this.buttonFichas.UseVisualStyleBackColor = false;
+            this.buttonFichas.Click += new System.EventHandler(this.buttonFichas_Click);
             // 
             // buttonCampanhas
             // 
             this.buttonCampanhas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.buttonCampanhas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCampanhas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
-            this.buttonCampanhas.Location = new System.Drawing.Point(26, 259);
+            this.buttonCampanhas.Location = new System.Drawing.Point(26, 262);
             this.buttonCampanhas.Name = "buttonCampanhas";
             this.buttonCampanhas.Size = new System.Drawing.Size(112, 36);
             this.buttonCampanhas.TabIndex = 4;
             this.buttonCampanhas.Text = "Campanhas";
             this.buttonCampanhas.UseVisualStyleBackColor = false;
+            this.buttonCampanhas.Click += new System.EventHandler(this.buttonCampanhas_Click);
             // 
-            // Home
+            // panelHome
+            // 
+            this.panelHome.Location = new System.Drawing.Point(163, 16);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(1235, 577);
+            this.panelHome.TabIndex = 5;
+            // 
+            // buttonMestres
+            // 
+            this.buttonMestres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.buttonMestres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMestres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(121)))), ((int)(((byte)(121)))));
+            this.buttonMestres.Location = new System.Drawing.Point(26, 147);
+            this.buttonMestres.Name = "buttonMestres";
+            this.buttonMestres.Size = new System.Drawing.Size(112, 36);
+            this.buttonMestres.TabIndex = 6;
+            this.buttonMestres.Text = "Mestres";
+            this.buttonMestres.UseVisualStyleBackColor = false;
+            this.buttonMestres.Click += new System.EventHandler(this.buttonMestres_Click_1);
+            // 
+            // HomeUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(211)))), ((int)(((byte)(219)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1444, 632);
+            this.Controls.Add(this.buttonMestres);
+            this.Controls.Add(this.panelHome);
             this.Controls.Add(this.buttonCampanhas);
             this.Controls.Add(this.buttonFichas);
             this.Controls.Add(this.buttonJogadores);
-            this.Controls.Add(this.buttonMestres);
             this.Controls.Add(this.buttonUsuarios);
-            this.Name = "Home";
+            this.Name = "HomeUI";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -115,10 +129,11 @@
         #endregion
 
         private System.Windows.Forms.Button buttonUsuarios;
-        private System.Windows.Forms.Button buttonMestres;
         private System.Windows.Forms.Button buttonJogadores;
         private System.Windows.Forms.Button buttonFichas;
         private System.Windows.Forms.Button buttonCampanhas;
+        private System.Windows.Forms.Panel panelHome;
+        private System.Windows.Forms.Button buttonMestres;
     }
 }
 
