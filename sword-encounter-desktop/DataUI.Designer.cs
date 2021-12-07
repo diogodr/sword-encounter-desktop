@@ -1,6 +1,6 @@
 ﻿namespace sword_encounter_desktop
 {
-    partial class UserUI
+    partial class DataUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,46 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.cartesianData = new LiveCharts.WinForms.CartesianChart();
             this.label1 = new System.Windows.Forms.Label();
-            this.cartesianUsers = new LiveCharts.WinForms.CartesianChart();
             this.SuspendLayout();
+            // 
+            // cartesianData
+            // 
+            this.cartesianData.Location = new System.Drawing.Point(32, 51);
+            this.cartesianData.Name = "cartesianData";
+            this.cartesianData.Size = new System.Drawing.Size(1096, 504);
+            this.cartesianData.TabIndex = 6;
+            this.cartesianData.Text = "cartesianChart1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(572, 21);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(538, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 24);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Users";
+            this.label1.Size = new System.Drawing.Size(107, 24);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Visão Geral";
             // 
-            // cartesianUsers
-            // 
-            this.cartesianUsers.Location = new System.Drawing.Point(44, 58);
-            this.cartesianUsers.Name = "cartesianUsers";
-            this.cartesianUsers.Size = new System.Drawing.Size(1096, 504);
-            this.cartesianUsers.TabIndex = 4;
-            this.cartesianUsers.Text = "cartesianChart1";
-            // 
-            // UserUI
+            // Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(211)))), ((int)(((byte)(219)))));
-            this.ClientSize = new System.Drawing.Size(1164, 575);
-            this.Controls.Add(this.cartesianUsers);
+            this.ClientSize = new System.Drawing.Size(1161, 573);
+            this.Controls.Add(this.cartesianData);
             this.Controls.Add(this.label1);
-            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Name = "UserUI";
-            this.Text = "User";
+            this.Name = "Data";
+            this.Text = "Data";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private LiveCharts.WinForms.CartesianChart cartesianData;
         private System.Windows.Forms.Label label1;
-        private LiveCharts.WinForms.CartesianChart cartesianUsers;
     }
 }

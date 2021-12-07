@@ -27,7 +27,6 @@ namespace sword_encounter_desktop
         private async void loadChartUsers()
         {
             List<User> users = await userClient.ListUsers();
-            Debug.WriteLine(users[0].Email);
 
             List<int> mounths = new List<int> { };
 
@@ -60,11 +59,6 @@ namespace sword_encounter_desktop
             }); ;
 
             cartesianUsers.Series = series;
-        }
-
-        private void cartesianUsers_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
-        {
-
         }
     }
 }

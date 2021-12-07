@@ -15,9 +15,23 @@ namespace sword_encounter_desktop
         public HomeUI()
         {
             InitializeComponent();
+            loadData();
         }
 
         private Form Screen;
+
+        private void loadData()
+        {
+            Screen?.Close();
+            Screen = new DataUI
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill,
+            };
+            panelHome.Controls.Add(Screen);
+            Screen.Show();
+        }
 
         private void buttonUsuarios_Click(object sender, EventArgs e)
         {
@@ -75,6 +89,19 @@ namespace sword_encounter_desktop
         {
             Screen?.Close();
             Screen = new MasterUI
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill,
+            };
+            panelHome.Controls.Add(Screen);
+            Screen.Show();
+        }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            Screen?.Close();
+            Screen = new DataUI
             {
                 TopLevel = false,
                 FormBorderStyle = FormBorderStyle.None,
